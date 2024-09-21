@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mi amor</title>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Sacramento');
+  @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+  #card {
+    height: 500px;
+    width: 800px;
+    margin: 5em auto;
+    position: fixed;
+    top: -15px;
+    left: 25%;
+    display: flex;
+    visibility: hidden;
+  }
+
+  #card h2 {
+    font-size: 3em;
+    margin: 0;
+    color: pink;
+    text-align: center;
+  }
+
+  #card p {
+    font-size: 1.5em;
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 5px;
+    line-height: 1.3;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Sacramento', cursive;
+    background-color: #f1e3d3;
+    overflow: hidden;
+  }
+
+  .valentines-day {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .envelope {
+    position: relative;
+    filter: drop-shadow(0 0 25px rgba(0, 0, 0, .3));
+  }
+
+  .envelope:before {
+    content: "";
+    position: absolute;
+    width: 254px;
+    height: 254px;
+    background-color: #ff9494;
+    transform: rotate(-45deg);
+    border-radius: 0 15px 0 0;
+    left: -37px;
+    top: -82px;
+  }
+
+  .envelope:after {
+    content: "";
+    position: absolute;
+    background-color: #ff9494;
+    width: 360px;
+    height: 225px;
+    left: -90px;
+    top: 45px;
+  }
+
+  .heart {
+    position: relative;
+    background-color: #e01911;
+    display: inline-block;
+    height: 180px;
+    top: 50px;
+    left: 0;
+    transform: rotate(-45deg);
+    width: 180px;
+    filter: drop-shadow(0 -10px 25px rgba(0, 0, 0, .3));
+    transition: .5s;
+  }
+
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: #e01911;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    position: absolute;
+  }
+
+  .heart:before {
+    top: -100px;
+    left: 0;
+  }
+
+  .heart:after {
+    left: 100px;
+    top: 0;
+  }
+
+  .front {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 190px solid #fbd2d2;
+    border-top: 113px solid transparent;
+    border-bottom: 113px solid transparent;
+    top: 44px;
+    left: 80px;
+    z-index: 4;
+  }
+
+  .front:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 190px solid #fbd2d2;
+    border-top: 113px solid transparent;
+    border-bottom: 113px solid transparent;
+    top: -113px;
+    left: -170px;
+  }
+
+  .front:after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: "";
+    border-bottom: 150px solid #fce7e9;
+    border-right: 180px solid transparent;
+    border-left: 180px solid transparent;
+    top: -36px;
+    left: -170px;
+  }
+
+  .text {
+    position: absolute;
+    font-family: arial;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    top: 80px;
+    left: 15px;
+    transition: .5s;
+  }
+
+  #intro-message {
+  font-size: 1.5em;
+  color: #e01911;
+  text-align: center;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  font-family: "Playpen Sans", cursive;
+  font-weight: 700; 
+  }
+
+  .valentines-day:hover .heart {
+    transform: translateY(-50px) rotate(-45deg);
+  }
+
+  .valentines-day:hover .text {
+    transform: translateY(-50px);
+  }
+
+  #intro-message {
+  font-size: 2em;
+  color: #e01911;
+  text-align: center;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 10px; 
+  left: 0;
+  right: 0;
+  font-weight: 700;
+  }
+
+
+  .side {
+    background: #eee;
+    height: 550px;
+    padding: 10px;
+    position: absolute;
+  }
+
+  .side.one {
+    width: 420px;
+    transform: skew(8deg, 10deg);
+    background: linear-gradient(90deg, #fff, #fff 40%, #ddd);
+    left: -98px;
+    top: -30px;
+  }
+ 
+  .side.two {
+    width: 460px;
+    transform: skew(8deg, -9deg);
+    background: linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
+    left: 330px; 
+    top: -30px;
+  }
+
+
+</style>
+
+<body>
+
+  <div id="intro-message">Sabes, mi amor, mañana cumplimos 3 meses, así que por eso quería darte esta pequeña cartita <3
+    <spam style="font-size: 10px;">psdt:dale click a la cartita</spam>
+  </div>
+
+  <div class="valentines-day">
+    <div class="envelope"></div>
+    <div class="heart"></div>
+    <div class="text">FELIZ <br>MESAVERSARIO <br>MI AMOR</div>
+    <div class="front"></div>
+  </div>
+  
+
+  <div id="card">
+    <div class="side one">
+      <h2>Mi lindo amor</h2>
+      <p>Un día como hoy, me diste uno de los momentos más lindos que jamás olvidare. La verdad es que no esperaba para
+        nada lo que me dijiste aquel día, y peor aun cuando te vi aparecer con un ramo de flores, mi corazón se llenó de emoción.
+        En serio, no tienes idea de lo feliz que me hiciste en ese instante y lo nerviosa que me puse al mismo tiempo. (solo que a veces nose como reaccionar)
+      </p>
+      <p>
+        Pero sabes, lo que más me encantó de todo fue cuando me contaste que, en el momento cumpliste con uno de tus logros, la primera persona a la que le querias contar fui yo.
+      </p>
+    </div>
+    <div class="side two">
+      <p>En ese preciso instante, mi corazón explotó
+        de alegría porque me di cuenta de algo muy especial y es que cuando alguien te tiene en su mente al alcanzar un logro, es
+        porque formas parte de sus sueños y de su camino hacia el éxito. Es por eso que me alegro que lo hayas querido compartir conmigo.
+      </p>
+      <p>Y es que yo quiero acompañarte en cada uno de tus logros, estar ahí para verte crecer día a día, apoyar cada uno de tus
+        pasos y celebrar tus éxitos como si fueran míos. Así como quiero que tú también me acompañes en mis logros, que
+        estemos juntos en las buenas y en las malas.
+      </p>
+      <p>
+        Y, más que eso, deseo que juntos cumplamos los sueños y metas que nos tracemos como pareja, construyendo un futuro
+        lleno de amor, apoyo y complicidad, porque estoy segura de que lo mejor está por venir para nosotros. Te quiero muchisimo <3
+      </p>
+    </div>
+  </div>
+  
+
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src="./script.js"></script>
+
+</html>
